@@ -1,7 +1,6 @@
 package net.merchantpug.itemswapperorigins.mixin;
 
 import dev.tr7zw.itemswapper.util.ItemUtil;
-import io.github.apace100.apoli.Apoli;
 import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.apace100.apoli.power.InventoryPower;
 import net.merchantpug.itemswapperorigins.access.ApoliSlotAccess;
@@ -38,7 +37,6 @@ public abstract class ItemUtilMixin {
 				for (int j = 0; j < power.size(); ++j) {
 					ItemStack stack = power.getStack(j);
 					if (!stack.isEmpty() && stack.getItem() == item) {
-						Apoli.LOGGER.info(stack.getCount());
 						ItemUtil.Slot slot = new ItemUtil.Slot(-1, j, stack);
 						((ApoliSlotAccess)(Object)slot).setPowerId(power.getType().getIdentifier());
 						addUnstackableItems(ids, slot);
