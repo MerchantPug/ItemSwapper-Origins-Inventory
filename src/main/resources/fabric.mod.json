@@ -1,38 +1,39 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "itemswapperorigins",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "ItemSwapper - Origins Inventory",
+  "description": "Adds compatibility with Apoli/Origins's inventory power to ItemSwapper.",
   "authors": [
-    "Me!"
+    "MerchantPug"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "",
+    "sources": "https://github.com/MerchantPug/ItemSwapper-Origins-Inventory"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL-3",
+  "icon": "assets/itemswapperorigins/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.merchantpug.itemswapperorigins.ItemSwapperOrigins"
+    ],
+    "client": [
+      "net.merchantpug.itemswapperorigins.ItemSwapperOriginsClient"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "itemswapperorigins.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.11",
-    "fabric-api": "*",
-    "minecraft": "~1.19.3",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "fabricloader": ">=0.13.3",
+    "fabric": ">=0.54.0",
+    "minecraft": ">=1.19",
+    "java": ">=17",
+    "apoli": ">=2.5.1"
   }
 }
