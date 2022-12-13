@@ -9,45 +9,5 @@ This should also work with any other mod that utilises Apoli's power system.
 ## License
 This project is licensed under the GPL-3 license, just like the original ItemSwapper mod. Please keep this in mind when utilising code or when making a fork of this mod.
 
-## Implementing into your project
-**build.gradle**
-```groovy
-repositories {
-    maven {
-        name = "Ladysnake Libs"
-        url = 'https://ladysnake.jfrog.io/artifactory/mods'
-    }
-    maven {
-        name = "JitPack"
-        url = 'https://jitpack.io'
-    }
-    maven {
-        url = 'https://maven.cafeteria.dev'
-        content {
-            includeGroup 'net.adriantodt.fabricmc'
-        }
-    }
-    maven {
-        url "https://maven.shedaniel.me/"
-    }
-    maven {
-        url "https://maven.terraformersmc.com/"
-    }
-    maven {
-        name = "Modrinth"
-        url = "https://api.modrinth.com/maven"
-        content {
-            includeGroup "maven.modrinth"
-        }
-    }
-}
-
-dependencies {
-    modImplementation "net.merchantpug:itemswapperorigins:${project.iso_version}"
-}
-```
-
-**gradle.properties**
-```properties
-iso_version=[INSERT VERSION HERE]
-```
+## Releases
+There is no public release for this mod at the moment as this mod was made before the ItemSwapper API was even a thing. It will be released once the API becomes a thing and it is rewritten.
